@@ -1,0 +1,94 @@
+baseURL: "https://akhil-sai-r.github.io/Akhil_Portfolio/"
+
+languageCode: en-us
+title: Akhil Sai Ravi Kumar
+theme: PaperMod
+publishDir: public
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 10
+    - identifier: projects
+      name: Projects
+      url: /projects
+      weight: 30
+    - identifier: experience
+      name: Experience
+      url: /experience
+      weight: 40
+    - identifier: search
+      name: Search
+      url: /search
+      weight: 50
+    - identifier: contact
+      name: Contact
+      url: /contact
+      weight: 40
+
+
+
+params:
+  # theme
+  showToc: true
+  TocOpen: false
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  hideMeta: false
+
+  # for enchanced SEO
+  env: production
+
+  # Home Page
+  profileMode:
+    enabled: true
+    title: "Akhil Sai Ravi Kumar"
+    subtitle:  I am Akhil Sai Ravi Kumar, a dedicated Software Developer specializing in Artificial Intelligence (AI), Machine Learning (ML), and Generative AI (GenAI). With over 7 years of experience, I excel at designing and deploying intelligent systems that analyze complex data, predict outcomes, and generate innovative solutions to address real-world challenges. I am passionate about building impactful, scalable, and user-centric AI solutions that bridge cutting-edge technology with business goals. My approach emphasizes technical excellence, collaboration, and innovation to deliver measurable outcomes.Explore my portfolio to discover how AI, ML, and GenAI are driving smarter, data-driven decisions and transforming complex challenges into actionable insights. 🚀
+
+
+ 
+    imageUrl: "home/Aki_pic_main.jpg"
+    imageWidth: 220
+    imageHeight: 220
+
+  # Optional display customization
+  showContact: true  # Set to false if you don't want to display this section
+    # buttons:
+    #   - name: Resume
+    #     url: ""
+
+  # List View
+  hideDescriptionInList: false
+
+  # cover image for posts
+  cover:
+    hiddenInList: false # hide on list pages and home
+    hiddenInSingle: false # hide on single page
+
+
+
+
+  # text search
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+# for search using Fuse.js
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# allow HTML in MD
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
